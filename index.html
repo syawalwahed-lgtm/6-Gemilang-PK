@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#161b55">
+<title>Misi Juara Sihat! | Pendidikan Kesihatan Tahun 6</title>
+<style>
+:root{--navy:#161b55;--purple:#5b3fd1;--pink:#ff5da2;--yellow:#ffd84d;--cyan:#51e5e2;--green:#2ed47a;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:ui-rounded,"Trebuchet MS",system-ui,sans-serif;color:#171a4a;background:#111642;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(135deg,#20145e,#392d98 48%,#087eaa);background-size:180% 180%;animation:sky 12s ease infinite}
+@keyframes sky{0%,100%{background-position:0% 30%}50%{background-position:100% 70%}}
+.stars{position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.4;background-image:radial-gradient(#fff 1px,transparent 1px),radial-gradient(#ffd84d 1px,transparent 1px);background-size:53px 53px,91px 91px;background-position:0 0,20px 30px;animation:drift 24s linear infinite}
+@keyframes drift{to{background-position:0 300px,20px 430px}}
+header{color:white;padding:18px clamp(14px,4vw,44px);display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.brand{font-weight:1000;letter-spacing:.4px;font-size:clamp(1rem,2.6vw,1.4rem)}.brand span{color:var(--yellow)}
+.sound{border:2px solid #ffffff66;background:#ffffff1c;color:white;border-radius:999px;padding:10px 15px;font-weight:800;cursor:pointer}
+main{max-width:1120px;margin:auto;padding:0 16px 42px}.hero{position:relative;text-align:center;color:white;padding:26px 12px 28px}
+.pill{display:inline-block;border:1px solid #ffffff66;background:#ffffff18;padding:7px 13px;border-radius:999px;font-weight:800;font-size:.83rem}
+h1{font-size:clamp(2.2rem,7vw,4.8rem);line-height:.98;margin:18px auto 14px;max-width:850px;text-shadow:0 5px 0 #25156d}
+h1 em{font-style:normal;color:var(--yellow)}.hero p{max-width:700px;margin:0 auto 20px;color:#e8e9ff;font-size:1.05rem;line-height:1.6}
+.actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:14px;padding:13px 19px;font:inherit;font-weight:950;cursor:pointer;transition:transform .15s,filter .15s;box-shadow:0 5px 0 #0003}.btn:hover{transform:translateY(-2px);filter:brightness(1.05)}.btn:active{transform:translateY(2px);box-shadow:0 2px 0 #0003}.primary{background:var(--yellow);color:#31225e}.secondary{background:#fff;color:#352677}.pink{background:var(--pink);color:white}
+.track{margin:10px auto 28px;max-width:900px;background:#252b70;border:3px solid #ffffff55;border-radius:24px;padding:12px;overflow:hidden;box-shadow:0 18px 35px #090b3c66}
+.track-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#fff;font-weight:900;font-size:.85rem;margin:0 4px 9px}
+.road{height:116px;position:relative;overflow:hidden;border-radius:15px;background:repeating-linear-gradient(90deg,#45495e 0 70px,#383d54 70px 140px);border:2px solid #ffffff33}
+.road:before{content:"";position:absolute;left:0;right:0;top:50%;height:5px;transform:translateY(-50%);background:repeating-linear-gradient(90deg,#fff 0 32px,transparent 32px 58px);animation:road 1s linear infinite}
+@keyframes road{to{background-position:-58px 0}}
+.car{position:absolute;left:4%;top:12px;font-size:2.5rem;filter:drop-shadow(0 4px 2px #0005);transition:left .7s cubic-bezier(.2,.8,.2,1);z-index:2}.car:after{content:"";display:block;position:absolute;width:55px;height:6px;background:#ffd84d88;left:-30px;top:28px;z-index:-1}
+.finish{position:absolute;right:12px;top:0;height:100%;width:15px;background:repeating-conic-gradient(#fff 0 25%,#222 0 50%) 0/15px 15px;opacity:.9}
+.track-bottom{display:flex;justify-content:space-between;color:#e6e7ff;font-size:.82rem;margin:8px 4px 0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.panel{grid-column:span 12;background:#fff;border-radius:24px;padding:clamp(17px,3vw,28px);box-shadow:0 14px 35px #080a3b45}
+.section-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:18px}.emoji{font-size:2rem}.section-head h2{margin:0;color:#27205f;font-size:clamp(1.35rem,3vw,2rem)}.section-head p{margin:5px 0 0;color:#666b8c;line-height:1.5}
+.notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.note{border-radius:18px;padding:16px;background:#f2f3ff;border:1px solid #e4e5ff}.note:nth-child(2){background:#fff3d1}.note:nth-child(3){background:#e2fbf6}.note:nth-child(4){background:#ffe7f1}.note .big{font-size:1.8rem}.note h3{margin:7px 0 6px;font-size:1.05rem;color:#28225f}.note p,.note li{font-size:.94rem;line-height:1.5;color:#44496b}.note p{margin:0}.note ul{margin:6px 0 0;padding-left:20px}
+.tip{background:#f0fbff;border:2px dashed #6acbd5;padding:14px 16px;border-radius:15px;margin-top:13px;line-height:1.5}
+.objectives{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.tag{background:#eeeaff;color:#4a37ad;border-radius:999px;padding:7px 11px;font-size:.83rem;font-weight:800}
+.quiz-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}.quiz-card{border-radius:20px;background:#f5f5ff;padding:20px}.quiz-meta{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#625c96;font-weight:900;font-size:.88rem}.progress{height:9px;background:#dddff8;border-radius:99px;overflow:hidden;margin:12px 0 20px}.progress div{height:100%;width:0;background:linear-gradient(90deg,#6b4cff,#ff5da2);transition:width .3s}
+#question{font-size:clamp(1.12rem,2.5vw,1.5rem);line-height:1.4;margin:0 0 16px;color:#201b57}.answers{display:grid;gap:10px}.answer{width:100%;text-align:left;border:2px solid #dedfff;border-radius:14px;background:#fff;padding:13px 14px;color:#27205f;font:inherit;font-weight:800;cursor:pointer;display:flex;gap:10px;align-items:center}.answer .letter{display:grid;place-items:center;flex:0 0 30px;height:30px;border-radius:9px;background:#eceaff;color:#4c3bb3}.answer:hover:not(:disabled){border-color:#8b79ff;transform:translateX(2px)}.answer.correct{border-color:#20b86c;background:#e5fff0}.answer.wrong{border-color:#ff5d78;background:#fff0f2}.answer:disabled{cursor:default}
+.feedback{min-height:55px;margin-top:14px;border-radius:13px;padding:12px;background:#e9eaff;color:#393078;font-weight:850;line-height:1.4}.feedback.good{background:#dffbea;color:#087744}.feedback.bad{background:#fff0f2;color:#a72845}
+.sidebox{background:linear-gradient(155deg,#302579,#6250d9);color:#fff;border-radius:20px;padding:20px;display:flex;flex-direction:column;justify-content:space-between;min-height:300px}.sidebox h3{margin:0;font-size:1.3rem}.score{font-size:3rem;font-weight:1000;color:var(--yellow);line-height:1.1;margin:10px 0}.stars-row{font-size:1.5rem;letter-spacing:2px;min-height:34px}.sidebox p{line-height:1.5;color:#e8e7ff}.mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}.stat{background:#ffffff18;border-radius:12px;padding:10px}.stat b{display:block;font-size:1.3rem;color:var(--cyan)}
+.result{display:none;text-align:center;padding:28px 15px;border-radius:22px;background:linear-gradient(135deg,#fff1a8,#ffc4e1,#c8f9ff);color:#271b6d}.result.show{display:block;animation:pop .45s ease}.result h3{font-size:clamp(1.8rem,5vw,3rem);margin:5px}.result .trophy{font-size:4rem;animation:bounce 1.1s infinite}.result p{font-size:1.05rem}.result .btn{margin:5px}
+@keyframes pop{from{transform:scale(.94);opacity:0}to{transform:scale(1);opacity:1}}@keyframes bounce{50%{transform:translateY(-8px) rotate(4deg)}}
+footer{text-align:center;color:#e7e7ff;padding:22px 10px 4px;line-height:1.7;font-size:.9rem}footer strong{color:var(--yellow)}
+.confetti{position:fixed;top:-20px;width:10px;height:16px;z-index:20;pointer-events:none;animation:fall 2.5s linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(800deg);opacity:.2}}
+@media(max-width:720px){.quiz-layout{grid-template-columns:1fr}.sidebox{min-height:auto}.notes{grid-template-columns:1fr}.hero{padding-top:18px}.track{margin-top:0}.panel{border-radius:19px}.road{height:100px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<header><div class="brand">🏁 MISI <span>JUARA SIHAT!</span></div><button class="sound" id="soundBtn" aria-pressed="true">🔊 Bunyi: ON</button></header>
+<main>
+<section class="hero">
+  <div class="pill">🎓 PENDIDIKAN KESIHATAN • TAHUN 6</div>
+  <h1>Belajar Bijak,<br><em>Pecut Sihat!</em> 🚗</h1>
+  <p>Jom kuasai ilmu pemakanan sihat, kumpul bintang dan pacu kereta ke garisan penamat! Baca nota dahulu, kemudian cabar diri dengan 20 soalan.</p>
+  <div class="actions"><button class="btn primary" onclick="document.querySelector('#nota').scrollIntoView({behavior:'smooth'})">📚 Mula Belajar</button><button class="btn secondary" onclick="startQuiz()">🏎️ Mula Perlumbaan</button></div>
+</section>
+
+<section class="track" aria-label="Litar perlumbaan">
+ <div class="track-top"><span>🏎️ LITAR ILMU</span><span id="raceLabel">Sedia di garisan mula!</span></div>
+ <div class="road"><div class="car" id="car">🏎️</div><div class="finish" aria-label="Garisan penamat"></div></div>
+ <div class="track-bottom"><span>🏁 MULA</span><span id="raceProgress">0 / 20 soalan</span><span>🏆 TAMAT</span></div>
+</section>
+
+<div class="grid">
+<section class="panel" id="nota">
+ <div class="section-head"><div class="emoji">📖</div><div><h2>Nota Infografik: Kuasa Pemakanan!</h2><p>Fahami empat idea utama sebelum masuk ke litar kuiz.</p></div></div>
+ <div class="notes">
+  <article class="note"><div class="big">🥦🍎</div><h3>1. Makanan segar</h3><p>Makanan yang masih hampir kepada keadaan asal, contohnya buah-buahan, sayur-sayuran, ikan dan telur. Pelbagaikan pilihan untuk mendapat nutrien yang diperlukan badan.</p></article>
+  <article class="note"><div class="big">🥫🍞</div><h3>2. Makanan diproses</h3><p>Makanan yang telah diubah atau disediakan melalui proses tertentu, contohnya roti, keju dan ikan dalam tin. Semak label, kandungan gula, garam dan lemak.</p></article>
+  <article class="note"><div class="big">🍔🍟</div><h3>3. Makanan segera</h3><p>Makanan yang biasanya disediakan dengan cepat. Sesetengah pilihan boleh tinggi garam, gula atau lemak. Nikmati secara berpada-pada dan pilih pilihan lebih seimbang.</p></article>
+  <article class="note"><div class="big">🥗💧</div><h3>4. Pilihan lebih sihat</h3><p>Amalkan makanan pelbagai dan seimbang, lebihkan buah serta sayur, minum air kosong dan aktif bergerak. Tabiat sihat membantu mengurangkan risiko penyakit tidak berjangkit.</p></article>
+ </div>
+ <div class="tip"><strong>💡 Ingat!</strong> Bukan semua makanan diproses tidak sihat. Periksa label pemakanan, saiz hidangan dan kekerapan pengambilan. Seimbangkan pilihan makanan setiap hari.</div>
+ <div class="objectives"><span class="tag">🎯 Kenal pasti jenis makanan</span><span class="tag">🎯 Terangkan faedah makanan segar</span><span class="tag">🎯 Nilai pilihan pemakanan</span><span class="tag">🎯 Amalkan gaya hidup sihat</span></div>
+ <div class="tip"><strong>📘 Rujukan DSKP:</strong> Pendidikan Kesihatan Tahun 6 — SK 1.3: Mengetahui dan mengamalkan pemakanan yang sihat serta selamat; SP 1.3.1 hingga 1.3.4.</div>
+</section>
+
+<section class="panel" id="kuiz">
+ <div class="section-head"><div class="emoji">🎮</div><div><h2>Cabaran Lumba Kereta</h2><p>Jawab 20 soalan. Jawapan betul memberi ⭐ dan memecutkan kereta anda!</p></div></div>
+ <div class="quiz-layout" id="quizLayout">
+  <div class="quiz-card">
+   <div class="quiz-meta"><span id="qCounter">Soalan 0 daripada 20</span><span id="qPoints">⭐ 0 bintang</span></div>
+   <div class="progress"><div id="progressBar"></div></div>
+   <h3 id="question">Tekan “Mula Perlumbaan” untuk memulakan cabaran.</h3>
+   <div class="answers" id="answers">
+    <button class="answer" onclick="startQuiz()">🚦 Saya sudah bersedia!</button>
+   </div>
+   <div class="feedback" id="feedback" role="status" aria-live="polite">Baca nota infografik dahulu untuk tambah ilmu!</div>
+   <div class="actions" style="justify-content:flex-start;margin-top:13px"><button class="btn primary" id="nextBtn" onclick="nextQuestion()" disabled>Soalan seterusnya ➜</button><button class="btn secondary" onclick="readQuestion()">🗣️ Dengar soalan</button></div>
+  </div>
+  <aside class="sidebox">
+   <div><h3>🏆 Papan Skor</h3><div class="score" id="score">0 <small style="font-size:1rem">/ 20</small></div><div class="stars-row" id="starDisplay">☆☆☆☆☆</div><p id="encourage">Setiap soalan ialah peluang untuk belajar. Anda pasti boleh!</p></div>
+   <div class="mini-stats"><div class="stat">Jawapan betul<b id="correctStat">0</b></div><div class="stat">Kemajuan<b id="percentStat">0%</b></div></div>
+  </aside>
+ </div>
+ <div class="result" id="result"><div class="trophy" id="trophy">🏆</div><h3 id="resultTitle">Juara Pemakanan!</h3><p id="resultText"></p><div style="font-size:2rem" id="resultStars">⭐⭐⭐</div><button class="btn primary" onclick="restartQuiz()">🔁 Main Lagi</button><button class="btn secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Kembali ke atas</button></div>
+</section>
+</div>
+<footer>Disediakan untuk pembelajaran oleh<br><strong>MUHAMAD SYAWALWAHED</strong><br>SK (P) JALAN YAHYA AWAL<br><small>Media pembelajaran interaktif • Pendidikan Kesihatan Tahun 6</small></footer>
+</main>
+<script>
+const questions = [
+{q:"Antara berikut, yang manakah contoh makanan segar?",a:["Epal dan lobak merah","Gula-gula berwarna","Minuman berkarbonat"],c:0,e:"Buah-buahan dan sayur-sayuran ialah contoh makanan segar."},
+{q:"Apakah maksud makanan diproses?",a:["Makanan yang tidak boleh dimakan","Makanan yang telah diubah atau disediakan melalui proses tertentu","Semua makanan yang dimasak di rumah"],c:1,e:"Makanan diproses melalui kaedah seperti pengetinan, penapaian atau pemanggangan."},
+{q:"Yang manakah contoh makanan segera?",a:["Sup sayur buatan sendiri","Buah potong","Burger segera"],c:2,e:"Burger segera ialah contoh makanan segera; pilih saiz dan kandungan yang lebih seimbang."},
+{q:"Apakah faedah mengambil buah-buahan dan sayur-sayuran?",a:["Membekalkan vitamin, mineral dan serat","Menghilangkan keperluan minum air","Menjadikan kita tidak perlu tidur"],c:0,e:"Buah dan sayur membekalkan pelbagai nutrien dan serat yang penting."},
+{q:"Apakah tindakan bijak sebelum membeli makanan berbungkus?",a:["Pilih bungkusan paling terang sahaja","Semak label pemakanan dan tarikh luput","Abaikan maklumat pada bungkusan"],c:1,e:"Label membantu kita membandingkan gula, garam, lemak dan saiz hidangan."},
+{q:"Mengapa kita perlu mengehadkan pengambilan makanan yang tinggi garam, gula atau lemak?",a:["Supaya tidak perlu bersenam","Kerana semua makanan berbungkus beracun","Untuk membantu menjaga kesihatan dalam jangka panjang"],c:2,e:"Pengambilan berlebihan boleh meningkatkan risiko masalah kesihatan."},
+{q:"Antara berikut, yang manakah pilihan minuman harian yang baik?",a:["Air kosong","Minuman sangat manis","Minuman tenaga setiap hari"],c:0,e:"Air kosong membantu mengekalkan hidrasi tanpa gula tambahan."},
+{q:"Pernyataan yang betul tentang makanan diproses ialah…",a:["Semuanya mesti dielakkan","Ada yang boleh menjadi sebahagian diet seimbang; semak labelnya","Semuanya lebih berkhasiat daripada makanan segar"],c:1,e:"Tidak semua makanan diproses sama. Periksa kandungan dan saiz hidangan."},
+{q:"Apakah contoh amalan pemakanan seimbang?",a:["Makan satu jenis makanan sahaja","Tidak bersarapan setiap hari","Mempelbagaikan makanan mengikut keperluan badan"],c:2,e:"Kepelbagaian makanan membantu membekalkan nutrien yang berbeza."},
+{q:"Apakah yang dimaksudkan dengan penyakit tidak berjangkit?",a:["Penyakit yang tidak merebak daripada seorang kepada seorang melalui jangkitan","Penyakit yang hanya berlaku selepas makan buah","Penyakit yang pasti sembuh tanpa rawatan"],c:0,e:"Penyakit tidak berjangkit tidak merebak seperti penyakit berjangkit; gaya hidup boleh mempengaruhi risikonya."},
+{q:"Apakah pilihan snek yang lebih berkhasiat?",a:["Gula-gula dalam jumlah banyak","Buah segar","Minuman manis bersama kerepek setiap kali"],c:1,e:"Buah segar ialah pilihan snek yang membekalkan vitamin, mineral dan serat."},
+{q:"Mengapakah sarapan yang sesuai boleh membantu murid?",a:["Menggantikan semua hidangan lain","Membolehkan kita tidak minum air","Membekalkan tenaga dan nutrien untuk memulakan hari"],c:2,e:"Sarapan yang seimbang boleh membantu membekalkan tenaga untuk aktiviti pagi."},
+{q:"Apakah cara yang baik untuk mengurangkan pengambilan gula?",a:["Pilih air kosong berbanding minuman manis dengan kerap","Tambah gula ke semua minuman","Minum minuman manis untuk menghilangkan dahaga setiap masa"],c:0,e:"Memilih air kosong dengan lebih kerap membantu mengurangkan gula tambahan."},
+{q:"Apakah tindakan sesuai jika makanan berbau pelik atau sudah tamat tarikh luput?",a:["Makan sedikit untuk menguji","Jangan makan dan maklumkan kepada orang dewasa","Campurkan dengan makanan lain"],c:1,e:"Jangan ambil risiko dengan makanan yang mungkin tidak selamat."},
+{q:"Mengapa makanan perlu disimpan dengan cara yang betul?",a:["Supaya warnanya berubah","Supaya tidak perlu membasuh tangan","Untuk membantu mengekalkan keselamatan dan kualitinya"],c:2,e:"Penyimpanan yang betul membantu mengurangkan risiko makanan tercemar atau rosak."},
+{q:"Apakah amalan yang baik sebelum makan?",a:["Basuh tangan dengan sabun dan air","Berkongsi sudu yang kotor","Menyentuh makanan selepas bermain tanpa mencuci tangan"],c:0,e:"Mencuci tangan membantu mengurangkan pemindahan kuman ke makanan."},
+{q:"Apakah maksud makan secara berpada-pada?",a:["Makan sebanyak mungkin setiap kali","Mengawal jumlah dan kekerapan makanan tertentu","Tidak makan sepanjang hari"],c:1,e:"Berpada-pada bermaksud mengawal kuantiti dan kekerapan, bukan melangkau semua makanan."},
+{q:"Antara berikut, yang manakah contoh makanan yang diproses?",a:["Pisang yang baru dipetik","Timun segar","Roti yang dibakar"],c:2,e:"Roti melalui proses penyediaan dan pemanggangan."},
+{q:"Bagaimanakah aktiviti fizikal berkait dengan gaya hidup sihat?",a:["Membantu kesihatan apabila dilakukan secara berkala bersama tabiat sihat lain","Menggantikan keperluan makan seimbang","Hanya penting untuk atlet"],c:0,e:"Aktiviti fizikal berkala ialah sebahagian daripada gaya hidup sihat."},
+{q:"Apakah pilihan terbaik apabila rakan mengajak kita makan makanan segera setiap hari?",a:["Ikut sahaja supaya tidak berbeza","Cadangkan pilihan seimbang dan makan pelbagai jenis makanan","Berhenti makan tengah hari"],c:1,e:"Kita boleh membuat pilihan bijak dan mencadangkan makanan yang lebih seimbang."}
+];
+let index=-1, score=0, answered=false, soundOn=true, selectedVoice=null;
+const $=id=>document.getElementById(id);
+function playTone(freq=660,duration=.13,type='sine'){if(!soundOn)return;try{const ctx=new (window.AudioContext||window.webkitAudioContext)();const osc=ctx.createOscillator(),gain=ctx.createGain();osc.type=type;osc.frequency.value=freq;gain.gain.setValueAtTime(.12,ctx.currentTime);gain.gain.exponentialRampToValueAtTime(.001,ctx.currentTime+duration);osc.connect(gain);gain.connect(ctx.destination);osc.start();osc.stop(ctx.currentTime+duration);osc.onended=()=>ctx.close()}catch(e){}}
+function speak(text){if(!soundOn||!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(text);u.lang='ms-MY';u.rate=.94;const voices=window.speechSynthesis.getVoices();selectedVoice=voices.find(v=>/^ms(-|_)?my/i.test(v.lang))||voices.find(v=>/^ms/i.test(v.lang))||voices.find(v=>/^id/i.test(v.lang));if(selectedVoice)u.voice=selectedVoice;window.speechSynthesis.speak(u)}
+$('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;$('soundBtn').textContent=soundOn?'🔊 Bunyi: ON':'🔇 Bunyi: OFF';$('soundBtn').setAttribute('aria-pressed',String(soundOn));if(!soundOn&&'speechSynthesis'in window)window.speechSynthesis.cancel();else speak('Bunyi diaktifkan. Selamat belajar!')});
+function startQuiz(){if(index>=0&&index<questions.length)return;index=0;score=0;answered=false;$('quizLayout').style.display='grid';$('result').classList.remove('show');renderQuestion();$('kuiz').scrollIntoView({behavior:'smooth'});playTone(520,.12);setTimeout(()=>playTone(780,.15),120)}
+function renderQuestion(){answered=false;const item=questions[index];$('qCounter').textContent=`Soalan ${index+1} daripada ${questions.length}`;$('qPoints').textContent=`⭐ ${score} bintang`;$('progressBar').style.width=`${index/questions.length*100}%`;$('question').textContent=item.q;$('answers').innerHTML='';item.a.forEach((answer,i)=>{const b=document.createElement('button');b.className='answer';b.innerHTML=`<span class="letter">${String.fromCharCode(65+i)}</span><span>${answer}</span>`;b.onclick=()=>chooseAnswer(i,b);$('answers').appendChild(b)});$('feedback').className='feedback';$('feedback').textContent='Pilih jawapan yang paling tepat!';$('nextBtn').disabled=true;$('nextBtn').textContent=index===questions.length-1?'Lihat keputusan 🏆':'Soalan seterusnya ➜';$('score').innerHTML=`${score} <small style="font-size:1rem">/ 20</small>`;$('correctStat').textContent=score;$('percentStat').textContent=Math.round(index/questions.length*100)+'%';$('starDisplay').textContent='⭐'.repeat(Math.min(5,Math.floor(score/4)))+'☆'.repeat(5-Math.min(5,Math.floor(score/4)));$('raceLabel').textContent=`Pecutan ${index+1} / 20`;updateCar(); }
+function chooseAnswer(choice,button){if(answered)return;answered=true;const item=questions[index];document.querySelectorAll('.answer').forEach((b,i)=>{b.disabled=true;if(i===item.c)b.classList.add('correct')});const fb=$('feedback');if(choice===item.c){score++;button.classList.add('correct');fb.className='feedback good';fb.textContent='✅ Betul! Syabas! ⭐ '+item.e;playTone(740,.12);setTimeout(()=>playTone(990,.18),120);speak('Betul! Syabas!');}else{button.classList.add('wrong');fb.className='feedback bad';fb.textContent='❌ Belum tepat. Cuba lagi! '+item.e;playTone(220,.25,'triangle');speak('Belum tepat. Cuba lagi!');} $('qPoints').textContent=`⭐ ${score} bintang`;$('score').innerHTML=`${score} <small style="font-size:1rem">/ 20</small>`;$('correctStat').textContent=score;$('percentStat').textContent=Math.round((index+1)/questions.length*100)+'%';$('starDisplay').textContent='⭐'.repeat(Math.min(5,Math.floor(score/4)))+'☆'.repeat(5-Math.min(5,Math.floor(score/4)));$('progressBar').style.width=`${(index+1)/questions.length*100}%`;$('raceProgress').textContent=`${index+1} / 20 soalan`;updateCar();$('nextBtn').disabled=false;$('encourage').textContent=score>=index+1?'Hebat! Anda memecut dengan ilmu!':'Teruskan usaha, setiap jawapan mengajar sesuatu!';}
+function updateCar(){const pct=index<0?0:Math.min(91,((index+(answered?1:0))/questions.length)*91);$('car').style.left=`${4+pct}%`;$('raceProgress').textContent=`${Math.max(0,index+(answered?1:0))} / 20 soalan`;}
+function nextQuestion(){if(!answered)return;if(index<questions.length-1){index++;renderQuestion()}else finishQuiz()}
+function readQuestion(){if(index<0){speak('Baca nota infografik dahulu, kemudian tekan mula perlumbaan.');return}const item=questions[index];speak(item.q+'. Pilihan jawapan: '+item.a.map((a,i)=>`${String.fromCharCode(65+i)}. ${a}`).join('. '))}
+function finishQuiz(){$('quizLayout').style.display='none';$('result').classList.add('show');$('progressBar').style.width='100%';$('raceProgress').textContent='20 / 20 soalan';$('raceLabel').textContent='🏁 Perlumbaan tamat!';$('car').style.left='88%';let title,msg,trophy;if(score>=18){title='JUARA PEMAKANAN!';msg='Luar biasa! Anda menguasai banyak ilmu pemakanan sihat.';trophy='🏆'}else if(score>=14){title='PELUMBA HEBAT!';msg='Bagus! Anda sudah mempunyai asas yang kukuh. Teruskan belajar.';trophy='🥇'}else if(score>=10){title='USAHA YANG BAIK!';msg='Anda semakin maju. Ulang nota dan cuba lagi untuk skor lebih tinggi.';trophy='🥈'}else{title='JANGAN PUTUS ASA!';msg='Setiap percubaan membantu anda belajar. Baca nota dan berlumba sekali lagi.';trophy='🚗'}$('resultTitle').textContent=title;$('resultText').textContent=`Skor anda: ${score}/20 (${Math.round(score/20*100)}%). ${msg}`;$('trophy').textContent=trophy;$('resultStars').textContent='⭐'.repeat(Math.max(1,Math.ceil(score/4)));confetti();playTone(660,.16);setTimeout(()=>playTone(880,.2),150);speak(`${title}. Skor anda ${score} daripada 20. ${msg}`);$('result').scrollIntoView({behavior:'smooth',block:'center'})}
+function restartQuiz(){index=0;score=0;$('quizLayout').style.display='grid';$('result').classList.remove('show');renderQuestion();$('kuiz').scrollIntoView({behavior:'smooth'})}
+function confetti(){for(let i=0;i<65;i++){const el=document.createElement('i');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=['#ff5da2','#ffd84d','#51e5e2','#6c55ff','#2ed47a'][i%5];el.style.animationDelay=(Math.random()*.9)+'s';el.style.transform=`rotate(${Math.random()*180}deg)`;document.body.appendChild(el);setTimeout(()=>el.remove(),3600)}}
+if('speechSynthesis'in window)window.speechSynthesis.onvoiceschanged=()=>{selectedVoice=window.speechSynthesis.getVoices().find(v=>/^ms/i.test(v.lang))||null};
+</script>
+</body>
+</html>
